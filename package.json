@@ -1,0 +1,47 @@
+{
+  "name": "hana-no-shiai",
+  "version": "1.0.0",
+  "description": "A Hanafuda-based strategic card game",
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louisbirla/hana-no-shiai.git"
+  },
+  "homepage": "https://github.com/louisbirla/hana-no-shiai#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html",
+    "start": "parcel index.html"
+  },
+  "keywords": [],
+  "author": "Louis Birla",
+  "license": "MIT",
+  "dependencies": {
+    "@chainsafe/libp2p-noise": "^5.0.2",
+    "libp2p": "latest",
+    "libp2p-bootstrap": "^0.14.0",
+    "libp2p-mplex": "^0.10.4",
+    "libp2p-webrtc-star": "^0.25.0",
+    "libp2p-websockets": "^0.16.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.0",
+    "assert": "^2.0.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "browserify-zlib": "^0.2.0",
+    "https-browserify": "^1.0.0",
+    "parcel": "^2.0.1",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "util": "^0.12.4"
+  }
+}
