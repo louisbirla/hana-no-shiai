@@ -9,21 +9,16 @@ import {
 } from "@chakra-ui/react";
 import { Logo } from "./logo";
 import { useAtom } from "jotai";
-import { PageAtom } from "./pages/pages";
+import { BasicNextLink } from "./basicNextLink";
 
 export const Header: React.FC = () => {
-  const [page, setPage] = useAtom(PageAtom);
   return (
     <Flex p={2} justify="space-between" width="100vw" as="header">
-      <HStack>
-        <Logo as="h1" />
-        <Heading textTransform="capitalize">{page}</Heading>
-      </HStack>
+      <Logo as="h1" />
       <HStack mr={5} as="nav">
         <ButtonGroup spacing={3} variant="link">
-          <Button onClick={() => setPage("game")}>Game</Button>
-          <Button onClick={() => setPage("friends")}>Friends</Button>
-          <Button onClick={() => setPage("settings")}>Settings</Button>
+          <BasicNextLink href="/">Home</BasicNextLink>
+          <BasicNextLink href="/friends">Friends</BasicNextLink>
         </ButtonGroup>
       </HStack>
     </Flex>

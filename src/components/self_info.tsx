@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Divider, Text, VStack } from "@chakra-ui/react";
 import { useAtom } from "jotai";
 import { PeerIdAtom } from "./libp2p";

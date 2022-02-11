@@ -1,5 +1,5 @@
 import { HeadingProps, Heading, Text } from "@chakra-ui/react";
-import * as React from "react";
+import React from "react";
 
 export const Logo: React.FC<HeadingProps> = (props) => (
   <Heading

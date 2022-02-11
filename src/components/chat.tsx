@@ -1,6 +1,6 @@
 import * as React from "react";
 import { atom, useAtom } from "jotai";
-import { Peer } from "./pages/friends";
+import { Peer } from "../pages/friends";
 import { Text } from "@chakra-ui/react";
 
 export const GlobalChatAtom = atom<Message[]>([]);

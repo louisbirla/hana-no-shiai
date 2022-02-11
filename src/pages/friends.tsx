@@ -15,7 +15,8 @@ import { atom, useAtom } from "jotai";
 import * as React from "react";
 import PeerId from "peer-id";
 import { atomWithStorage } from "jotai/utils";
-import { NicknameEditor } from "../nickname_editor";
+import { NicknameEditor } from "../components/nickname_editor";
+import { Layout } from "../components/layout";
 
 export const PeersAtom = atom<{ [id: string]: Peer }>({});
 
@@ -157,3 +158,13 @@ export const Friends: React.FC = () => {
     </Box>
   );
 };
+
+const Page = () => {
+  return (
+    <Layout>
+      <Friends />
+    </Layout>
+  );
+};
+
+export default Page;
