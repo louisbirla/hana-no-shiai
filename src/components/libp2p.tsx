@@ -10,12 +10,14 @@ import PeerId from "peer-id";
 import React from "react";
 import crypto from "libp2p-crypto";
 import Gossipsub from "libp2p-gossipsub";
-import KadDht from "libp2p-kad-dht";
 import { PeersAtom, Peer, FriendsAtom } from "../pages/friends";
 import { useToast } from "@chakra-ui/react";
 import { AddGlobalMessageAtom, GlobalChatAtom } from "./chat";
 
-export const PeerIdAtom = atomWithStorage<PeerId>("peerid", undefined);
+export const PeerIdAtom = atomWithStorage<PeerId | undefined>(
+  "peerid",
+  undefined
+);
 export const GLOBAL_TOPIC = "hana-no-shiai/global1";
 export const GLOBAL_CHAT_TOPIC = "hana-no-shiai/chat/global1";
 
@@ -40,7 +42,6 @@ export const createLibp2p = async () => {
       streamMuxer: [Mplex],
       peerDiscovery: [Bootstrap],
       pubsub: Gossipsub,
-      dht: KadDht,
     },
     config: {
       peerDiscovery: {
