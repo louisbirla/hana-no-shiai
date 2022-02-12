@@ -17,6 +17,7 @@ import PeerId from "peer-id";
 import { atomWithStorage } from "jotai/utils";
 import { NicknameEditor } from "../components/nickname_editor";
 import { Layout } from "../components/layout";
+import { NextPage } from "next";
 
 export const PeersAtom = atom<{ [id: string]: Peer }>({});
 
@@ -159,12 +160,16 @@ export const Friends: React.FC = () => {
   );
 };
 
-const Page = () => {
+const Page: NextPage = () => {
   return (
     <Layout>
       <Friends />
     </Layout>
   );
+};
+
+Page.getInitialProps = async () => {
+  return {};
 };
 
 export default Page;
